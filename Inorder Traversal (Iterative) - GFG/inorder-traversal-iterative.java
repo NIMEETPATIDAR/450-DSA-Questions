@@ -112,23 +112,33 @@ class Node {
 } */
 class Solution
 {
-    // Return a list containing the inorder traversal of the given tree
-     ArrayList<Integer> al=new ArrayList<Integer>();
-    ArrayList<Integer> inOrder(Node root)
-    {
-        // Code
-        if(root==null)
-        {
-            return null;
-        }
-        else
-        {
-        inOrder(root.left);
-        al.add(root.data);
-        inOrder(root.right);
-        }
-        return al;
-    }
-    
-    
+// Return a list containing the inorder traversal of the given tree
+ArrayList<Integer> al=new ArrayList<Integer>();
+ArrayList<Integer> inOrder(Node root)
+{
+// Code
+Stack<Node> stack= new Stack<>();
+Node t,j;
+if(root==null)
+{
+return null ;
+}
+for(j=root;j!=null;j=j.left) 
+{
+stack.push(j);
+}
+while(!stack.isEmpty())
+{
+t=stack.pop();
+al.add(t.data);
+if(t.right!=null)
+{
+for(j=t.right;j!=null;j=j.left) 
+{
+stack.push(j);
+}
+}
+}
+return al;
+}
 }
