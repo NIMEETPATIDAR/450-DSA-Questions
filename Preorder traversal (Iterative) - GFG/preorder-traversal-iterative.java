@@ -115,18 +115,17 @@ class Tree
     ArrayList<Integer> preOrder(Node root)
     {
         // Code
-        if(root==null)
-        {
-            return null;
-        }
-        else
-        {
-        al.add(root.data);
-        preOrder(root.left);
-        preOrder(root.right);
-        }
-        return al;
+        Stack<Node> stack= new Stack<>();
+        Node t;
+if(root==null) return null;
+stack.push(root);
+while(!stack.isEmpty())
+{
+t=stack.pop();
+al.add(t.data);
+if(t.right!=null) stack.push(t.right);
+if(t.left!=null) stack.push(t.left);
+}
+    return al;
     }
-    
-    
 }
