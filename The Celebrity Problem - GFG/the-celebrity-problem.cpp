@@ -14,7 +14,7 @@ class Solution
     int celebrity(vector<vector<int> >& M, int n) 
     {
         // code here 
-        int in[n]={0};
+        /*int in[n]={0};
         int out[n]={0};
         
         for(int i=0;i<n;i++)
@@ -36,7 +36,22 @@ class Solution
                 return i;
             }
         }
-        return -1;
+        return -1;*/
+        
+        // 2nd approach
+        int c=0;
+        for(int i=1;i<n;i++)
+        {
+            if(M[c][i]==1)
+            {
+                c=i;
+            }
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(i!=c && (M[c][i]==1 || M[i][c]==0)) return -1;
+        }
+        return c;
     }
 };
 
