@@ -1,23 +1,23 @@
 class MyHashSet {
 public:
     //int arr[100000+1];
-    vector<int> arr;
+    vector<bool> arr;
     MyHashSet() {
-        arr.resize(1e6+1,0);
+        arr.resize(1e6+1,false);
         
     }
     
     void add(int key) {
-        arr[key]=1;
+        arr[key]=true;
         
     }
     
     void remove(int key) {
-        arr[key]=0;
+        arr[key]=false;
     }
     
     bool contains(int key) {
-        return arr[key]==1;
+        return arr[key];
     }
 };
 
