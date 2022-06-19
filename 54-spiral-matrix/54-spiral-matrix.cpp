@@ -8,8 +8,6 @@ public:
     int left=0;
     int right=matrix[0].size()-1;
     vector<int> ans;
-        
-        
     while(top<=bottom && left<=right)
     {
         for(int i=left;i<=right;i++)
@@ -43,8 +41,5 @@ public:
         }
     }
     return ans;
-     
-        
-        
     }
 };
