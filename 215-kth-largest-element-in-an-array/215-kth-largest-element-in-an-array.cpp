@@ -11,6 +11,5 @@ public:
         }
         sort(num, num + n);
         return num[n-k];
-        
     }
 };
