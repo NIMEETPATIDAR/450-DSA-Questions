@@ -3,8 +3,9 @@ class Solution
 public:
 vector<vector<int>> merge(vector<vector<int>> &v)
 {
-    sort(v.begin(), v.end());
     vector<vector<int>> res;
+    if(v.size()==0) return res;
+    sort(v.begin(), v.end());
     res.push_back(v[0]);
     int index = 0;
     for (int i = 1; i < v.size(); i++)
