@@ -13,11 +13,11 @@ int romanToInt(string s)
         {'D',500},
         {'M',1000},
     };
-    int result =0;
+    int result=0;
     for(int i=0;i<s.size();i++)
     {
-        if(mp[s[i]]<mp[s[i+1]]) result-=mp[s[i]];
-        else result+=mp[s[i]];
+        if(mp[s[i]]<mp[s[i+1]]) result=result-mp[s[i]];
+        else result=result+mp[s[i]];
     }
     return result;
 }
