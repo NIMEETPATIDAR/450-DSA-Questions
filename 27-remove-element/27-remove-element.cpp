@@ -15,3 +15,20 @@ public:
         return i;
     }
 };
+
+/*
+
+ public int removeElement(int[] nums, int val){
+        int slowIndex = 0;
+        for (int fastIndex = 0; fastIndex < nums.length; fastIndex++) {
+            if(nums[fastIndex] != val){
+                if(slowIndex!=fastIndex) {
+                    nums[slowIndex] = nums[fastIndex];
+                }
+                slowIndex++;
+            }
+        }
+        return slowIndex;
+    }
+
+*/
