@@ -1,7 +1,36 @@
-class Solution {
+class Solution 
+{
 public:
-    string longestCommonPrefix(vector<string>& strs) {
+    string longestCommonPrefix(vector<string>& strs) 
+    {
+        string s=strs[0];
+        int lcf=INT_MAX;
         
+        for(int i=1;i<strs.size();i++)
+        {
+            int count=0;
+            for(int j=0;j<s.size();j++)
+            {
+                if(s[j]==strs[i][j])
+                {
+                    count++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            lcf=min(lcf,count);
+        }
+        return s.substr(0,lcf);
+    }
+};
+/*
+class Solution 
+{
+public:
+    string longestCommonPrefix(vector<string>& strs) 
+    {
         int mi=INT_MAX;
         if(strs.size()==0) return "";
         string c=strs[0];
@@ -26,6 +55,6 @@ public:
             mi=min(mi,a);
         }
         return c.substr(0,mi);
-        
     }
 };
+*/
