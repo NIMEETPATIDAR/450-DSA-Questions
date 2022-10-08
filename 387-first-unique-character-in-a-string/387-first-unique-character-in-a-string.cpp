@@ -3,7 +3,7 @@ class Solution
 public:
     int firstUniqChar(string s) 
     {
-        unordered_map<char,int> ump(26);
+        unordered_map<char,int> ump;
         for(int i=0; i<s.size(); i++)
         {
             ump[s[i]]++;
