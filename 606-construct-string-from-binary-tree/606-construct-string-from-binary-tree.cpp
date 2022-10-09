@@ -9,6 +9,45 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+
+
+
+class Solution 
+{
+public:
+    string tree2str(TreeNode* root) 
+    {
+        string s="";
+        s=to_string(root->val);
+        if(root->left!=NULL)
+        {
+            s=s+"("+tree2str(root->left)+")";
+        }
+        if(root->right!=NULL)
+        {
+            if(root->left==NULL)
+            {
+                s=s+"()";
+            }
+            s=s+"("+tree2str(root->right)+")";
+        }
+        return s;
+	}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class Solution {
 public:
     string tree2str(TreeNode* root) {
@@ -22,3 +61,9 @@ public:
 		return ans;
 	}
 };
+*/
+
+
+
+
+
