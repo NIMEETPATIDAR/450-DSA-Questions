@@ -3,7 +3,7 @@ class Solution
   public:
   int uniqueMorseRepresentations(vector<string>& words) 
   {
-  	vector<string> a = {".-","-...","-.-.","-..",".","..-.","--.","....",
+  	vector<string> arr = {".-","-...","-.-.","-..",".","..-.","--.","....",
                   "..",".---","-.-",".-..","--","-.","---",".--.",
                   "--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
 
@@ -12,7 +12,7 @@ class Solution
   	for (int i=0; i< words.size(); i++) 
     {
   		string st;
-  		for (int j=0; j<words[i].size(); j++) st += a[words[i][j] - 'a'];
+  		for (int j=0; j<words[i].size(); j++) st += arr[words[i][j] - 'a'];
   		um[st]=1;
   	}
 
