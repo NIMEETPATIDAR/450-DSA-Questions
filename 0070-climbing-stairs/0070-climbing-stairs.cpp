@@ -1,4 +1,4 @@
-// By using Space Optimization
+// By using Dynamic Programming (Space Optimization)
 class Solution
 {
 public:
@@ -16,9 +16,6 @@ public:
         return c;
     }
 };
-
-
-
 
 /*
 // By using Dynamic Programming (Tabulation)
