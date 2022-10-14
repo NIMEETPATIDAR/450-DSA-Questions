@@ -10,7 +10,7 @@ public:
         {
             currentRow.push_back(previousRow[i-1]+previousRow[i]);
         }
-        currentRow.push_back(1);
+        currentRow.emplace_back(1);
         return currentRow;
     }
 };
