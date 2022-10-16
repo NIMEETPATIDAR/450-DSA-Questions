@@ -12,10 +12,6 @@ public:
                 j++;
             }
         }
-        for(int i=0;i<j;i++)
-        {
-            cout<<s[i];
-        }
         int l=0;
         int k=j-1;
         while(l<k)
