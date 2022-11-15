@@ -40,7 +40,7 @@ class Solution
         sort(arr,arr+n,cmp);
         
         int maxi=arr[0].dead;
-        for(int i=1;i<n;i++)
+        for(int i=0;i<n;i++)
         {
             maxi=max(maxi,arr[i].dead);
         }
