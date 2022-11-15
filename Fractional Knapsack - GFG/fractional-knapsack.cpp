@@ -46,7 +46,7 @@ class Solution
             else
             {
                 int remain=W-currWeight;
-                ans=ans+(arr[i].value/(double)arr[i].weight)*(double)remain;
+                ans=ans+((double)arr[i].value/(double)arr[i].weight)*(double)remain;
                 break;
             }
         }
